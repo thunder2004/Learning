@@ -2,6 +2,7 @@ def calc_d(x):
     summ1_all = 0
     for num1 in x:
         temp_summ = 0
+        num_org = num1
         while True:
             temp_summ = temp_summ + (num1 % 10)
             next_d = num1 // 10
@@ -10,7 +11,7 @@ def calc_d(x):
             else:
                 num1 = next_d
         if (temp_summ % 7) == 0:
-            summ1_all = summ1_all + temp_summ
+            summ1_all = summ1_all + num_org
 
     return summ1_all
 
